@@ -5,4 +5,4 @@
   roles:
     - lianhuahayu.docker_role
     - lianhuahayu.odoo_role 
-    - pgadmin_role
+    #- pgadmin_role
