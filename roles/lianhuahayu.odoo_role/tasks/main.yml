@@ -1,0 +1,17 @@
+---
+- name: "Ajout du template docker-compose.yml"
+  template:
+    src: "docker-compose.yml.j2"
+    dest: /home/{{ ansible_user }}/docker-compose.yml
+
+- name: "Lancer le fichier docker-compose.yml"
+  docker_compose:
+    project_src: /home/{{ ansible_user }}
+    files:
+    - docker-compose.yml
+    
+- name: "Relancer le container odoo apres l'init de la db"
+  shell: |
+    sleep 15
+    docker container restart {{ odoo_container }}
+    exit 0

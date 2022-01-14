@@ -1,0 +1,8 @@
+---
+- name: "deploy Odoo with a role"
+  hosts: ansible
+  become: true
+  roles:
+    - lianhuahayu.docker_role
+    - lianhuahayu.odoo_role 
+    - pgadmin_role
