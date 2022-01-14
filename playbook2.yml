@@ -1,0 +1,6 @@
+---
+- name: "deploy pgadmin with a role"
+  hosts: ansible
+  become: true
+  roles:
+    - pgadmin_role
