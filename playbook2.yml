@@ -3,4 +3,5 @@
   hosts: ansible
   become: true
   roles:
+    - lianhuahayu.docker_role
     - pgadmin_role
